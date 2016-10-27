@@ -23,10 +23,7 @@ module.exports = function(app) {
     console.log(password_re);
     if(password!=password_re)
     {
-     // res.render("reg",{
-     //   success:req.flash("success").toString(),
-     //   error:req.flash("error").toString()
-     // });
+      req.flash("error","两次输入的密码不一致,请重新输入");
       return res.redirect("/reg");
     }
   });
