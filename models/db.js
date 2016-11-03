@@ -7,3 +7,5 @@ var settings = require('../settings'),
     Server = require('mongodb').Server;
 module.exports = new Db(settings.db, new Server(settings.host, settings.port),
     {safe: true});
+var ccs=new Date();
+console.log("I'am Frank");
